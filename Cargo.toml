@@ -1,0 +1,8 @@
+[package]
+name = "trunc8"
+version = "0.2.0"
+edition = "2021"
+description = "Truncate text to a specific line length, based on a number of parameters."
+license = "BSD-3-Clause"
+
+[dependencies]
