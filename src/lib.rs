@@ -105,4 +105,11 @@ mod tests {
             assert_eq!(truncated, true);
         });
     }
+
+    #[test]
+    fn it_works_with_urls() {
+        let len = 20;
+        let result = truncate("Hello this is an example with a URL, to test how the library will handle that: https://github.com/pinecat/trunc8. For reference, please see the aforementioned repository for bug reports and pull requests.", len);
+        assert_eq!(result, vec!["Hello this is an", "example with a URL,", "to test how the", "library will handle", "that:", "https://github.com/pinecat/trunc8.", "For reference,", "please see the", "aforementioned", "repository for bug", "reports and pull", "requests."]);
+    }
 }
